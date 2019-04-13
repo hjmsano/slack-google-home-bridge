@@ -24,11 +24,7 @@ controller.hears(['.*?'], ['ambient'], function (bot, message) {
         body: message.text
     };
     if (deviceSettings[message.channel]) {
-        options.url = `${process.env.BRIDGE_URL}\
-        ?target=${encodeURIComponent(deviceSettings[message.channel].device)}\
-        &lang=${deviceSettings[message.channel].lang}
-        &voice=${deviceSettings[message.channel].voice}\
-        &type=${deviceSettings[message.channel].type}`;
+        options.url = `${process.env.BRIDGE_URL}?target=${encodeURIComponent(deviceSettings[message.channel].device)}&lang=${deviceSettings[message.channel].lang}&voice=${deviceSettings[message.channel].voice}&type=${deviceSettings[message.channel].type}`;
         request(options, (error, response, body) => {
             console.log({
                 "error": error,
