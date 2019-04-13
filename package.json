@@ -1,0 +1,25 @@
+{
+  "name": "slack-google-home-bridge",
+  "version": "0.1.0",
+  "description": "A Slack bot for bridging between Slack channel and Google Home. Google Home read a message on the channel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nohup node index.js&"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hjmsano/slack-google-home-bridge.git"
+  },
+  "author": "Hajime Sano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hjmsano/slack-google-home-bridge/issues"
+  },
+  "homepage": "https://github.com/hjmsano/slack-google-home-bridge#readme",
+  "dependencies": {
+    "botkit": "^0.7.4",
+    "dotenv": "^7.0.0",
+    "request": "^2.88.0"
+  }
+}

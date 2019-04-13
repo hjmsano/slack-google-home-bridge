@@ -1,0 +1,25 @@
+Initializing Botkit v0.7.4
+info: ** No persistent storage method specified! Data may be lost when process shuts down.
+
+****************************************************************************************
+* WARNING: Your bot is operating without recommended security mechanisms in place.     *
+* Initialize your Botkit controller with a clientSigningSecret paramter to enable      *
+* verification that all incoming webhooks originate with Slack:                        *
+*                                                                                      *
+* var controller = new Botkit.slackbot({clientSigningSecret: <my secret from slack>}); *
+*                                                                                      *
+****************************************************************************************
+>> Botkit docs: https://botkit.ai/docs/readme-slack.html#securing-outgoing-webhooks-and-slash-commands
+>> Slack docs: https://api.slack.com/docs/verifying-requests-from-slack
+
+notice: ** BOT ID: google_home_bot ...attempting to connect to RTM!
+notice: RTM websocket opened
+{ error:
+   { Error: connect ECONNREFUSED 127.0.0.1:8080
+       at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1097:14)
+     errno: 'ECONNREFUSED',
+     code: 'ECONNREFUSED',
+     syscall: 'connect',
+     address: '127.0.0.1',
+     port: 8080 },
+  body: undefined }

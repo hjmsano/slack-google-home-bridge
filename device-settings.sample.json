@@ -1,0 +1,14 @@
+{
+  "ABC123": {
+    "device": "Kitchen",
+    "voice": "Mizuki",
+    "lang": "ja-JP",
+    "type": "text"
+  },
+  "XYZ987": {
+    "device": "BedRoom",
+    "voice": "Takumi",
+    "lang": "ja-JP",
+    "type": "text"
+  }
+}
