@@ -48,7 +48,7 @@ All of these environment variables are required.
 
 |Variable|Sample|Note|
 |:----|:----|:----|
-|SLACK_TOKEN|`abcdefg1234567890xyz`|Slack Bot APU Token|
+|SLACK_TOKEN|`abcdefg1234567890xyz`|Slack Bot API Token|
 |BRIDGE_URL|`http://localhost:8080/`|An endpoint URL of Google Home - Amazon Polly bridge|
 
 ## Usage
