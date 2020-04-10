@@ -24,7 +24,10 @@ This is a minimum capability of Slack bot to transmit messages in the specific c
 ```sh
 docker build -t slack-google-home-bridge .
 docker run --net=host \
--e "SLACK_TOKEN=abcdefg1234567890xyz" \
+-e "SLACK_CLIENT_ID=123498762048" \
+-e "SLACK_CLIENT_SECRET=a1a12345a22a1a0c98765e22a256e123" \
+-e "SLACK_CLIENT_SIGNING_SECRET=a512a6ab2048009642a9e1239c123456" \
+-e "SLACK_TOKEN=abab-123456987654-1234556789012-AABCEf1abcdefgH12a9876" \
 -e "BRIDGE_URL=http://localhost:8080/" \
 --restart=on-failure
 slack-google-home-bridge
@@ -48,7 +51,10 @@ All of these environment variables are required.
 
 |Variable|Sample|Note|
 |:----|:----|:----|
-|SLACK_TOKEN|`abcdefg1234567890xyz`|Slack Bot API Token|
+|SLACK_CLIENT_ID|`123498762048.54321567890123`|Slack Client ID|
+|SLACK_CLIENT_SECRET|`a1a12345a22a1a0c98765e22a256e123`|Slack Client Secret|
+|SLACK_CLIENT_SIGNING_SECRET|`a512a6ab2048009642a9e1239c123456`|Slack Client Signing Secret|
+|SLACK_TOKEN|`abab-123456987654-1234556789012-AABCEf1abcdefgH12a9876`|Slack Bot User OAuth Access Token|
 |BRIDGE_URL|`http://localhost:8080/`|An endpoint URL of Google Home - Amazon Polly bridge|
 
 ## Usage
