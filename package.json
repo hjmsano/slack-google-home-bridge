@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/hjmsano/slack-google-home-bridge#readme",
   "dependencies": {
-    "botkit": "^0.7.4",
+    "botkit": "^0.7.6",
     "dotenv": "^7.0.0",
-    "request": "^2.88.0"
+    "request": "^2.88.2"
   }
 }
