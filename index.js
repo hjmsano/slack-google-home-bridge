@@ -15,7 +15,7 @@ controller.spawn({
     token: process.env.SLACK_TOKEN
 }).startRTM(function (error) {
     if (error) {
-        throw new Error(error);
+        console.log(error);
     }
 });
 
@@ -29,13 +29,11 @@ controller.hears(['.*?'], ['ambient'], function (bot, message) {
     };
     if (deviceSettings[message.channel]) {
         options.url = `${process.env.BRIDGE_URL}?target=${encodeURIComponent(deviceSettings[message.channel].device)}&lang=${deviceSettings[message.channel].lang}&voice=${deviceSettings[message.channel].voice}&type=${deviceSettings[message.channel].type}`;
-        request(options, (error, response, body) => {
-            console.log({
-                "error": error,
-                "body": body
-            });
+        request(options.url, options, (error, response, body) => {
+            if(error){
+                bot.reply(message, error);
+            }
         });
-        // bot.reply(message, 'Transmitted.');
     } else {
         bot.reply(message, 'Nothing to do.');
     }
