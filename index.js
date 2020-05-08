@@ -11,6 +11,15 @@ const controller = Botkit.slackbot({
     scopes: ['bot'],
 });
 
+const start_rtm = () => {
+    bot.startRTM((err,bot,payload) => {
+        if (err) {
+            console.log('Failed. Will retry after 10sec.')
+            return setTimeout(start_rtm, 10000);
+        }
+    });
+}
+
 controller.spawn({
     token: process.env.SLACK_TOKEN
 }).startRTM(function (error) {
