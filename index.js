@@ -20,13 +20,12 @@ controller.spawn({
 });
 
 controller.on('rtm_open', (bot, message) => {
-  console.info('Connected')
-})
+  console.info('Connected');
+});
 
 controller.on('rtm_close', (bot, message) => {
-  console.info('Closed')
-})
-
+  console.info('Closed');
+});
 
 controller.hears(['.*?'], ['ambient'], function (bot, message) {
     let options = {
