@@ -5,20 +5,12 @@ const deviceSettings = require('./device-settings.json');
 
 const controller = Botkit.slackbot({
     debug: false,
+    retry: Infinity,
     clientId: process.env.SLACK_CLIENT_ID,
     clientSecret: process.env.SLACK_CLIENT_SECRET,
     clientSigningSecret: process.env.SLACK_CLIENT_SIGNING_SECRET,
     scopes: ['bot'],
 });
-
-const start_rtm = () => {
-    bot.startRTM((err,bot,payload) => {
-        if (err) {
-            console.log('Failed. Will retry after 10sec.')
-            return setTimeout(start_rtm, 10000);
-        }
-    });
-}
 
 controller.spawn({
     token: process.env.SLACK_TOKEN
